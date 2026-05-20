@@ -95,7 +95,7 @@ Best for: mapping a field, validating ideas before coding, generating experiment
 ```bash
 python loop.py --topic "muon optimizer for transformer training"
 # or explicitly:
-python loop.py --topic "muon optimizer for transformer training" --mode text
+python loop.py --topic "muon optimizer for transformer training" --mode text --iters 2
 ```
 
 **example output (executor, text mode):**
@@ -117,7 +117,7 @@ The Executor writes a self-contained Python script and **runs it**. The Critic s
 Best for: testing things you can measure, benchmarking, sanity-checking ideas with real numbers.
 
 ```bash
-python loop.py --topic "learning rate warmup for small LLMs" --mode code
+python loop.py --topic "does learning rate warmup improve final loss for a 6-layer GPT trained on TinyShakespeare" --mode code --iters 5 --critic balanced
 ```
 
 The script must print at least one metric line:
