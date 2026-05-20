@@ -19,9 +19,9 @@ two modes. two audiences. one loop.
 
 everyone does this once.
 
-**step 1 — get a Groq API key**
+**step 1 — get a Gemini API key**
 
-go to [console.groq.com](https://console.groq.com), sign up (free), create an API key.
+go to google console,  sign up (free), create an API key.
 
 **step 2 — clone and enter the repo**
 
@@ -34,13 +34,13 @@ cd autoresearch
 
 ```bash
 # mac / linux
-export GROQ_API_KEY=gsk_your_key_here
+export GEMINI_API_KEY=gsk_your_key_here
 
 # windows (cmd)
-set GROQ_API_KEY=gsk_your_key_here
+set GEMINI_API_KEY=gsk_your_key_here
 
 # windows (powershell)
-$env:GROQ_API_KEY="gsk_your_key_here"
+$env:GEMINI_API_KEY="gsk_your_key_here"
 
 # to make it permanent, add the export line to your ~/.bashrc or ~/.zshrc
 ```
@@ -574,7 +574,7 @@ python loop.py --stats
 python loop.py --history "your topic"
 ```
 
-**time estimates at ~500 tps (Groq):**
+**time estimates at ~500 tps:**
 
 | mode | what determines speed | time per iteration |
 |------|-----------------------|-------------------|
@@ -589,19 +589,19 @@ python loop.py --history "your topic"
 
 ## troubleshooting
 
-**`GROQ_API_KEY not set`**
+**`GEMINI_API_KEY not set`**
 ```bash
-export GROQ_API_KEY=gsk_...
+export GEMINI_API_KEY=gsk_...
 # confirm it's set
-echo $GROQ_API_KEY
+echo $GEMINI_API_KEY
 ```
 
-**`Groq API error: model not found`**
+**`GEMINI API error: model not found`**
 
-the model string changed. check the current model list at console.groq.com
-and update `GROQ_MODEL` in `tools.py`:
+the model string changed. check the current model list at GOOGLE CONSOLE
+and update `GOOGLE_MODEL` in `tools.py`:
 ```python
-GROQ_MODEL = "openai/gpt-oss-120b"  # update this if needed
+GOOGLE_MODEL = "YOUR MODEL"  
 ```
 
 **arxiv search fails**
